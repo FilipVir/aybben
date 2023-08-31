@@ -1,0 +1,62 @@
+extends ../layouts/default-layout.pug
+include ../mixins/general-block.pug
+
+block content
+    main.wrapper
+        section.hero-section.about
+            div.bubble
+            div.bubble-2
+            div.container.about-init
+                +general-block([{tag: 'h1', text: 'Welcome to Aybben Tech', key: 'title'}])
+                p.description  We are a passionate team of technology enthusiasts committed to empowering businesses in the digital world.
+        section.mission-section
+            div.container
+                h2.mission-title Our Mission
+                p.mission-description We strive to deliver innovative and customized solutions that help our clients achieve their goals and exceed their expectations.
+        section.about-us
+            article.container.about-item
+                div.figure-group
+                    figure.about-figure
+                        img.about-image(src='/assets/images/about/1.jpg' alt='')
+                    figure.about-figure
+                        img.about-image(src='/assets/images/about/2.jpg' alt='')
+                section
+                    h3.about-title Expertise and Services
+                    p.about-description Drawing on our extensive expertise, we specialize in crafting high-performance mobile applications and dynamic websites. Using cutting-edge tools and technologies likeFlutter, Angular, and Node.js, we create immersive digital experiences that captivate audiences and drive tangible business growth.
+
+
+            article.container.about-item
+                div.bubble
+                section
+                    h3.about-title Client-Centric Approach
+                    p.about-description We firmly believe that understanding our clients' unique needs and aspirations is crucial to their success. By taking a client-centric approach, we establish deep partnerships, enabling us to provide personalized solutions that exceed expectations and deliver real value.
+
+                div.figure-group
+                    div.figure-group-init
+                        figure.about-figure
+                            img.about-image(src='/assets/images/about/3.jpg' alt='')
+                        figure.about-figure
+                            img.about-image(src='/assets/images/about/4.jpg' alt='')
+                    figure.about-figure
+                        img.about-image(src='/assets/images/about/5.jpg' alt='')
+            article.container.about-item
+                div.bubble-2
+                figure.about-figure
+                    img.about-image(src='/assets/images/about/6.jpg' alt='')
+
+                section
+                    h3.about-title Exceptional Team
+                    p.about-description Our highly skilled professionals, including talented designers, experienced developers, quality assurance specialists, and project managers work together seamlessly to bring ideas to life.
+            article.container.about-item
+                section
+                    h3.about-title Quality and Innovation
+                    p.about-description Quality is at the heart of everything we do. We adhere to rigorous quality assurance processes to ensure that our projects meet the highest standards of performance, reliability, and user experience. We stay updated with the latest industry trends and leverage innovative approaches to provide cutting-edge solutions.
+
+                div.figure-group
+                    figure.about-figure
+                        img.about-image(src='/assets/images/about/7.jpg' alt='')
+                    figure.about-figure
+                        img.about-image(src='/assets/images/about/8.jpg' alt='')
+        section.contact-block
+            div.container
+                include ../partials/contact-us.pug

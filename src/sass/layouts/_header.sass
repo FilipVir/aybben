@@ -1,0 +1,131 @@
+.header
+  position: sticky
+  top: 0
+  left: 0
+  padding: toRem(39) 0 toRem(15)
+  background-color: $header-bg
+  z-index: 800
+
+  .navbar
+    @extend %d-flex
+    @extend %align-center
+    @extend %justify-content-between
+    .navbar-toggle,
+    .navbar-close
+      border: none
+      background: transparent
+      outline: none
+      display: none
+      @media all and (max-width: 767px)
+        display: block
+    .navbar-close
+      margin-left: auto
+    .navbar-logo
+      height: toRem(46)
+      @media all and (max-width: 1200px) and (min-width: 768px)
+        height: toRem(35)
+
+.navigation
+  @extend %d-flex
+  @extend %align-center
+  @media screen and (max-width: 767px)
+    display: block
+    position: fixed
+    right: 0
+    top: 0
+    width: 100%
+    height: 100vh
+    transform: translateX(100%)
+    transition: transform 300ms ease-out
+    &::after
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background-color: rgba(0, 0, 0, .8)
+      opacity: 0
+      transition: opacity 1s
+    &.active
+      transform: translateX(0)
+      &::after
+        opacity: 1
+
+  .collapse
+    @extend %d-flex
+    list-style: none
+    @media all and (max-width: 767px)
+      position: relative
+      display: block
+      height: 100%
+      width: 300px
+      background: linear-gradient(247.19deg, #247EE0 0.32%, #2578DA 18.78%, #2767C8 45.01%, #2B4BAC 74.16%, #2E3191 96.51%)
+      margin-left: auto
+      padding: toRem(70) toRem(19) toRem(30) toRem(30)
+      z-index: 1000
+
+  .nav-item
+    @media all and (min-width: 1201px)
+      margin-right: toRem(24)
+
+    @media all and (max-width: 1200px) and (max-width: 6768px)
+      margin-right: toRem(16)
+    @media all and (max-width: 767px)
+      margin-bottom: toRem(22)
+
+    &:first-child,
+    &:nth-child(2),
+    &:nth-last-child(2)
+      display: none
+      @media all and (max-width: 767px)
+        display: block
+
+    .nav-link
+      position: relative
+      color: $base-color
+      font-size: toRem(18)
+      font-weight: 500
+      padding: toRem(10)
+      border-radius: toRem(2)
+      transition: all 300ms ease-out
+      @media all and (max-width: 1200px)
+        font-size: toRem(14)
+      @media all and (max-width: 767px)
+        font-size: toRem(20)
+        color: $primary-color
+
+      span
+        display: inline-block
+        transition: all 300ms ease-out
+
+      &::after
+        content: ''
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 100%
+        height: toRem(2)
+        background: linear-gradient(247.19deg, #247EE0 0.32%, #2578DA 18.78%, #2767C8 45.01%, #2B4BAC 74.16%, #2E3191 96.51%)
+        opacity: 0
+
+      &:hover
+        background: #f9f9f9
+
+        span
+          transform: translateY(toRem(1))
+
+      &.active
+        background: linear-gradient(247.19deg, #247EE0 0.32%, #2578DA 18.78%, #2767C8 45.01%, #2B4BAC 74.16%, #2E3191 96.51%)
+        background-clip: text
+        -webkit-background-clip: text
+        color: transparent
+        @media all and (max-width: 767px)
+          background: transparent
+          color: $primary-color
+        &::after
+          opacity: 1
+  .gradient-btn
+    @include button()
+    @media all and (max-width: 767px)
+      display: none

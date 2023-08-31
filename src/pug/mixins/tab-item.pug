@@ -1,0 +1,12 @@
+mixin tab-item(tab,index)
+    article.tab-pane.fade(data-id="tab-"+index class=index==0? 'show' :'')
+        figure.tab-figure
+            img.tab-image(src='/assets/images/our-expertises/' + tab.image alt='')
+        section
+            h3.tab-title=tab.title
+            p.tab-description= tab.description
+            h4.tab-subTitle=tab.subTitle
+            div.tab-technologies
+                each image in  tab.images
+                    figure
+                        img.technologies-image(src='/assets/images/technologies/' + image alt='')

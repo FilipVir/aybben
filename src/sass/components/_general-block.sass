@@ -1,0 +1,39 @@
+.general-title
+  font-weight: 800
+  margin-bottom: toRem(13)
+  @media all and (min-width: 768px)
+  font-size: toRem(62)
+  @media all and (max-width: 767px)
+    font-size: toRem(52)
+
+.sub-title
+  font-weight: 600
+  font-size: toRem(32)
+  @media all and (min-width: 768px)
+  margin-bottom: toRem(34)
+  @media all and (max-width: 767px)
+    font-size: toRem(24)
+    margin-bottom: toRem(13)
+
+.description
+  font-size: toRem(18)
+  line-height: toRem(25)
+  color: $secondary-color
+  @media all and (max-width: 767px)
+    font-size: toRem(16)
+
+.general-title,
+.sub-title,
+.description
+  @media all and (min-width: 567px)
+    text-align: center
+
+.btn-solid
+  @media all and (min-width: 768px)
+    $fz: toRem(30)
+    $padding: toRem(16) toRem(75)
+    @include button($fz, $padding)
+  @media all and (max-width: 767px)
+    $fz: toRem(14)
+    $padding: toRem(16) toRem(16)
+    @include button($fz, $padding)

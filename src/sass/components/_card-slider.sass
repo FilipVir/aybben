@@ -1,0 +1,54 @@
+.slider-block
+  .card
+    &-init
+      position: relative
+      overflow: hidden
+      border-radius: toRem(20)
+      box-shadow: 0 0 toRem(18) 0 rgba(0,0,0,.5)
+    &-init,
+    &-figure,
+    &-image,
+    &-title,
+    &-description
+      width: 100%
+    &-info,
+    &-image
+      height: 100%
+    &-image,
+    &-info
+      position: absolute
+    &-figure
+      padding-top: 100%
+    &-image
+      left: 0
+      top: 0
+      object-fit: cover
+      object-position: center
+    &-info
+      @extend %d-flex
+      flex-wrap: wrap
+      align-content: flex-end
+      color: $primary-color
+      padding: toRem(24)
+      bottom: 0
+      left: 0
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 22.92%, rgba(0, 0, 0, 0.192661) 51.04%, rgba(0, 0, 0, 0.83) 100%)
+    &-title
+      font-weight: 800
+      font-size: toRem(18)
+      line-height: toRem(14)
+      margin-bottom: toRem(18)
+      @media all and (max-width: 767px)
+        font-size: toRem(15)
+        margin-bottom: toRem(10)
+    &-description
+      font-weight: 500
+      font-size: toRem(14)
+      overflow: hidden
+      text-overflow: ellipsis
+      display: -webkit-box
+      -webkit-line-clamp: 3
+      line-clamp: 3
+      -webkit-box-orient: vertical
+      @media all and (max-width: 767px)
+        font-size: toRem(12)

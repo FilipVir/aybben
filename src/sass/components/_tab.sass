@@ -1,0 +1,76 @@
+.nav-tab
+  @extend %d-flex
+  flex-wrap: wrap
+  list-style: none
+  margin-top: toRem(43)
+  margin-bottom: toRem(54)
+  @media all and (min-width: 768px)
+    justify-content: center
+    gap: toRem(16)
+
+  @media all and (max-width: 767px)
+    gap: toRem(14) toRem(10)
+  .nav
+    &-item
+      flex-shrink: 0
+    &-link
+      @media all and (min-width: 1201px)
+      $fz: toRem(18)
+      $padding: toRem(16) toRem(32)
+      cursor: pointer
+      @media all and (max-width: 767px)
+        $fz: toRem(14)
+        $padding: toRem(16) toRem(19)
+      @include button-outline($fz, $padding)
+
+.tab
+  &-pane
+    @extend %align-center
+    grid-template-columns: calc(52% - 50px) 1fr
+    justify-content: center
+    gap: toRem(50)
+    &:not(.show)
+      display: none
+    &.show
+      @extend %d-grid
+    @media all and (max-width: 992px)
+      grid-template-columns: 100%
+
+  &-figure
+    @media all and (max-width: 767px)
+      grid-area: 2
+  &-figure,
+  &-image
+    width: 100%
+
+  &-title
+    color: $base-color
+    font-weight: 600
+    margin-bottom: toRem(23)
+    @media all and (min-width: 1201px)
+      font-size: toRem(36)
+    @media all and (max-width: 1200px)
+      font-size: toRem(24)
+
+  &-description
+    color: $secondary-color
+    font-size: toRem(16)
+    line-height: toRem(25)
+    margin-bottom: 44px
+    text-wrap: balance
+    @media all and (max-width: 1200px) and (min-width: 767px)
+      font-size: toRem(12)
+      margin-bottom: toRem(22)
+  &-subTitle
+    font-weight: 600
+    margin-bottom: toRem(22)
+    @media all and (min-width: 1201px)
+      font-size: toRem(24)
+    @media all and (max-width: 1200px)
+      font-size: toRem(16)
+  &-technologies
+    @extend %d-flex
+    flex-wrap: wrap
+    gap: toRem(20) toRem(15)
+    .technologies-image
+      height: toRem(50)

@@ -1,0 +1,51 @@
+extends ../layouts/default-layout.pug
+include ../mixins/general-block.pug
+include ../mixins/card-item.pug
+block content
+    main.wrapper
+        section.hero-section.container
+            div.bubble
+            +general-block([{tag: 'h1', text: 'Blog', key: 'title'},
+                {
+                    tag: 'p',
+                    text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',
+                    key: 'description'
+                }])
+
+        section.blog-items
+            div.bubble
+
+            div.container.blog-items-init
+                -
+                    var data = [
+                    {image:'1.jpg',title:'Lorem Ipsum is simply dummy',description:'Lorem ake a type specimen book. It has survived not only five centuries, bupeschanged.',link:'/'},
+                    {image:'2.jpg',title:'Lorem Ipsum is simply dummy',description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',link:'/'},
+                    {image:'3.jpg',title:'Lorem Ipsum is simply dummy',description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',link:'/'},
+                    {image:'1.jpg',title:'Lorem Ipsum is simply dummy',description:'Lorem ake a type specimen book. It has survived not only five centuries, bupeschanged.',link:'/'},
+                    {image:'2.jpg',title:'Lorem Ipsum is simply dummy',description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',link:'/'},
+                    {image:'3.jpg',title:'Lorem Ipsum is simply dummy',description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',link:'/'},
+                    {image:'1.jpg',title:'Lorem Ipsum is simply dummy',description:'Lorem ake a type specimen book. It has survived not only five centuries, bupeschanged.',link:'/'},
+                    {image:'2.jpg',title:'Lorem Ipsum is simply dummy',description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',link:'/'},
+                    {image:'3.jpg',title:'Lorem Ipsum is simply dummy',description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',link:'/'},
+                    {image:'1.jpg',title:'Lorem Ipsum is simply dummy',description:'Lorem ake a type specimen book. It has survived not only five centuries, bupeschanged.',link:'/'},
+                    {image:'2.jpg',title:'Lorem Ipsum is simply dummy',description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',link:'/'},
+                    {image:'3.jpg',title:'Lorem Ipsum is simply dummy',description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',link:'/'}
+                    ]
+                each item in data
+                    div
+                        +card-item(item)
+        ul.pagination
+            li.page-item
+                a.page-link.prev.disabled(href='#')
+                    svg(width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg")
+                        path(class="arrow-path" fill-rule="evenodd" clip-rule="evenodd" d="M1.76368 0.432013L7.08983 5.18513C7.41667 5.47681 7.41667 5.94971 7.08983 6.24138L1.76368 10.9945C1.43684 11.2862 0.906931 11.2862 0.580091 10.9945C0.253252 10.7028 0.253252 10.2299 0.580091 9.93825L5.31445 5.71326L0.58009 1.48826C0.253251 1.19659 0.253251 0.723688 0.58009 0.432013C0.90693 0.140338 1.43684 0.140338 1.76368 0.432013Z")/
+            each page in [1,2,3,4,5,6]
+                li.page-item
+                    a(href='#' class= page=='1' ? 'active page-link' : 'page-link')= page
+            li.page-item
+                a.page-link.next(href='#')
+                    svg(width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg")
+                        path(class="arrow-path" fill-rule="evenodd" clip-rule="evenodd" d="M1.76368 0.432013L7.08983 5.18513C7.41667 5.47681 7.41667 5.94971 7.08983 6.24138L1.76368 10.9945C1.43684 11.2862 0.906931 11.2862 0.580091 10.9945C0.253252 10.7028 0.253252 10.2299 0.580091 9.93825L5.31445 5.71326L0.58009 1.48826C0.253251 1.19659 0.253251 0.723688 0.58009 0.432013C0.90693 0.140338 1.43684 0.140338 1.76368 0.432013Z")/
+
+
+

@@ -1,0 +1,8 @@
+mixin card-item(item)
+    article.card-item
+        figure.card-figure
+            img.card-image(src='/assets/images/blog/' + item.image alt='')
+        div.card-info
+                h3.card-title=item.title
+                p.card-description=item.description
+                a.card-link(href = data.link)= 'Read More'

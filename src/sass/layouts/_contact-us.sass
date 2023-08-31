@@ -1,0 +1,19 @@
+.contact
+  &-component
+    max-width: toRem(840)
+    margin: 0 auto
+    .btn-solid
+      margin: 0 auto
+      display: inherit
+      @media all and (max-width: 567px)
+        display: block
+        width: 100%
+  &-init
+    @extend %d-grid
+    grid-template-columns: repeat(2, calc((100% - 18px) / 2))
+    grid-gap: toRem(30) toRem(18)
+    margin: toRem(54) auto
+    @media all and (max-width: 567px)
+      grid-template-columns: 100%
+      grid-gap: toRem(20) toRem(0)
+      margin: toRem(19) auto

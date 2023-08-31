@@ -1,0 +1,55 @@
+extends ../layouts/default-layout.pug
+include ../mixins/general-block.pug
+include ../mixins/tab-item.pug
+include ../mixins/card-slider.pug
+block content
+    main.wrapper
+        section.hero-contact
+            div.bubble
+            div.bubble-2
+            div.container
+                include ../partials/contact-us.pug
+        section.contact-section
+            div.container
+                div.contact-map
+
+                    iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3020.883502193273!2d43.83581657561151!3d40.78657523304743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4041fbf52ca6d2cf%3A0x73d4a0452132e53b!2z0JPRjtC80YDQuNC50YHQutC40Lkg0YLQtdGF0L3QvtC70L7Qs9C40YfQtdGB0LrQuNC5INGG0LXQvdGC0YAsIDEgR2F5aSBTdHJlZXQsIEd5dW1yaSAzMTA1!5e0!3m2!1sru!2sam!4v1693239391100!5m2!1sru!2sam" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade")
+                div.contact-info
+                    ul.contact-info-list
+                        li.contact-info-item
+                            svg(width="27" height="28" viewBox="0 0 27 28")
+                                use(xlink:href="/assets/images/sprite.svg#phone")
+                            a.contact-info-link(href='tel: +374 77 299653')= '+374 77 299653'
+                        li.contact-info-item
+                            svg(width="31" height="25" viewBox="0 0 31 25" )
+                                use(xlink:href="/assets/images/sprite.svg#email")
+
+                            a.contact-info-link(href='mailTo: gurgen@aybbentech.com')='gurgen@aybbentech.com'
+
+                        li.contact-info-item
+                            svg(width="21" height="31" viewBox="0 0 21 31")
+                                use(xlink:href="/assets/images/sprite.svg#location")
+                            a.contact-info-link(href='https://goo.gl/maps/dfkp1u73Au5itjKV7')= '1 Gayi str., Gyumri, Armenia'
+                    div.social-block
+                        p= 'Connect with us on social media for updates, insights, and community engagement.'
+                        ul.social-icons
+                            li
+                                a.social-link(href="#")
+                                    svg(viewBox="0 0 44 44" class="facebook")
+                                        use(xlink:href="/assets/images/sprite.svg#facebook")
+                            li
+                                a
+                                    svg(class="instagram" viewBox="0 0 44 44")
+                                        use(xlink:href="/assets/images/sprite.svg#instagram")
+                            li
+                                a
+                                    svg(viewBox="0 0 44 44" class="twitter")
+                                        use(xlink:href="/assets/images/sprite.svg#twitter")
+                            li
+                                a
+                                    svg(viewBox="0 0 44 44" class="linkedin")
+                                        use(xlink:href="/assets/images/sprite.svg#linkedin")
+                            li
+                                a
+                                    svg(viewBox="0 0 44 44" class="youtube")
+                                        use(xlink:href="/assets/images/sprite.svg#youtube")

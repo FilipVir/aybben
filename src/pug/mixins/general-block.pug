@@ -1,0 +1,8 @@
+mixin general-block(obj)
+    each item in obj
+        if item.key == 'title'
+            #{item.tag}.general-title= item.text
+        else if item.key == 'subTitle'
+            #{item.tag}.sub-title= item.text
+        else
+            #{item.tag}.description= item.text

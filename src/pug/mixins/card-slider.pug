@@ -1,0 +1,7 @@
+mixin card-slider(item)
+    article.card-init
+        figure.card-figure
+            img.card-image(src='/assets/images/industries/' + item.image alt='')
+            figcapion.card-info
+                h3.card-title=item.title
+                p.card-description=item.description

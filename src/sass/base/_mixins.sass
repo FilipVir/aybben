@@ -1,0 +1,46 @@
+@use 'sass:math'
+
+$base-font-size: 16
+
+@function toRem($number)
+  @return math.div($number, $base-font-size) + rem
+
+@mixin button($fs: toRem(18),$padding: toRem(10) toRem(45))
+  color: $primary-color
+  display: inline-block
+  background: linear-gradient(247.19deg, #247EE0 0.32%, #2578DA 18.78%, #2767C8 45.01%, #2B4BAC 74.16%, #2E3191 96.51%)
+  box-shadow: 4px 4px 14px 0 rgba(37, 121, 219, .14)
+  border-radius: 50px
+  border: 2px solid #2B45A6
+  font-size: $fs
+  padding: $padding
+  text-decoration: none
+  text-align: center
+  @media all and (max-width: 1200px)
+    font-size: toRem(14)
+    padding: toRem(10) toRem(25)
+
+@mixin button-outline($fs: toRem(18),$padding: toRem(10) toRem(45))
+  display: flex
+  align-items: center
+  justify-content: center
+  color: $base-color
+  background: transparent
+  border-radius: 50px
+  border: 2px solid $base-color
+  font-size: $fs
+  padding: $padding
+  text-decoration: none
+  text-align: center
+  &:hover,
+  &.active
+    color: $primary-color
+    background: linear-gradient(247.19deg, #247EE0 0.32%, #2578DA 18.78%, #2767C8 45.01%, #2B4BAC 74.16%, #2E3191 96.51%)
+    box-shadow: 4px 4px 14px 0 rgba(37, 121, 219, .14)
+    border-color: #2B45A6
+  @media all and (min-width: 1200px)
+    height: toRem(54)
+  @media all and (max-width: 1200px)
+    font-size: toRem(14)
+    padding: toRem(10) toRem(25)
+    height: toRem(49)

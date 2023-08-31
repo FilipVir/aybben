@@ -1,0 +1,39 @@
+
+footer.footer
+        nav.container.footer-menu
+            div.first-block
+                a(href='/index.html')
+                    img.navbar-logo(src='/assets/images/footer-logo.svg' alt='aybben')
+                div
+                    h3.title-share Follow Us
+                    ul.nav-icons
+                        each item in [{src:'/assets/images/fb.svg'},{src:'/assets/images/instagram.svg'},{src:'/assets/images/twetter.svg'},{src:'/assets/images/linkedin.svg'},{src:'/assets/images/youtube.svg'}]
+                            li
+                                a
+                                    img(src=item.src alt='')
+            div
+                h3.title Pages
+                ul.nav-menu
+                    each item in [{text:'Home',link:'/index.html'},{text:'Our Expertise',link:'/our-expertise.html'}, {text:'Industries',link:'/industries.html'},{text: 'About us',link:'/about-us.html'},{text:'Blog',link:'/blog.html'},{text:'Contact Us',link:'/contact-us.html'}]
+                        li.nav-item
+                            a.nav-link(href=item.link)= item.text
+
+            div.third-block
+                ul.nav-menu
+                    each item in [{text:'Privacy Policy',link:'tel:+374 77 299653'},{text:'Terms Of Service Link',link:'mailTo:gurgen@aybbentech.com'}]
+                        li.nav-item
+                            a.nav-link(href=item.link)= item.text
+            div
+                h3.title Contact Info
+                ul.nav-menu
+                    each item in [{text:'+374 77 299653',link:'tel:+374 77 299653'},{text:'gurgen@aybbentech.com',link:'mailTo:gurgen@aybbentech.com'}, {text:'1 Gayi str., Gyumri, Armenia',link:'https://goo.gl/maps/dfkp1u73Au5itjKV7'}]
+                        li.nav-item
+                            a.nav-link(href=item.link)= item.text
+
+        footer.copywrite-footer
+            div.container.copywrite-container
+                span= '© Inter Aybben Technologies 2023'
+                ul.copywrite-menu
+                    each item in [{text:'Cookie Policy',link:'/sdf'},{text:'Cookie Settings',link:'/dsfd'}]
+                        li.nav-item
+                            a.nav-link(href=item.link)= item.text

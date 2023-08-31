@@ -1,0 +1,20 @@
+mixin input-block(obj)
+    if obj.type == 'textarea'
+        div.input-group
+            label.input-label= obj.label
+            textarea.input-item(type=obj.type placeholder= obj.placeholder)
+    else if(obj.type=='tel')
+        div.input-group
+            label.input-label= obj.label
+            div.pone-group
+                div.pone-dropdown
+                    img.flug(src='/assets/images/usa.png')
+                    span.code= '+1'
+                    svg(width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg")
+                        path(d="M4.5 5.01489L0.602885 0.514893L8.39711 0.514893L4.5 5.01489Z" fill="#1E283E")/
+
+                input.tel-item(type=obj.type placeholder= obj.placeholder)
+    else
+        div.input-group
+            label.input-label= obj.label
+            input.input-item(type=obj.type placeholder= obj.placeholder)/

@@ -1,0 +1,110 @@
+.footer
+  background-color: #080E42
+  .footer-menu
+    @extend %d-grid
+    @extend %justify-content-between
+    padding-top: toRem(58)
+    padding-bottom: toRem(58)
+    @media all and (min-width: 1201px)
+    grid-template-columns: 33% repeat(3, minmax(auto, toRem(200)))
+    @media all and (max-width: 1200px) and (min-width: 768px)
+      grid-template-columns: toRem(230) repeat(3, minmax(auto, toRem(190)))
+    @media all and (max-width: 767px)
+      grid-template-columns: repeat(2, auto)
+      grid-gap: toRem(25)
+      padding-top: toRem(30)
+      padding-bottom: toRem(30)
+
+    .first-block
+      @extend %d-flex
+      @extend %justify-content-between
+      flex-direction: column
+      @media all and (max-width: 567px)
+        grid-column-start: 1
+        grid-column-end: 3
+        align-items: center
+        text-align: center
+    .third-block
+      @media all and (max-width: 567px)
+        grid-area: 4
+  .navbar-logo
+    height: toRem(55)
+    @media all and (max-width: 1200px) and (min-width: 768px)
+      height: toRem(35)
+
+  .nav-icons,
+  .nav-menu
+    list-style: none
+
+  .nav-icons
+    @extend %d-flex
+    @extend %align-center
+    gap: toRem(22)
+    @media all and (max-width: 1200px) and (min-width: 768px)
+      gap: toRem(10)
+    @media all and (max-width: 767px)
+      justify-content: center
+
+  .nav-menu
+    .nav-item
+      &:not(:last-child)
+        margin-bottom: toRem(16)
+    .nav-link
+      color: $primary-color
+      font-size: toRem(16)
+      @media all and (max-width: 1200px)
+        font-size: toRem(14)
+
+      &:hover,
+      &:active,
+      &:focus
+        color: $primary-color
+.title-share
+  color: $primary-color
+  font-weight: 500
+  font-size: toRem(18)
+  margin-bottom: toRem(16)
+  @media all and (max-width: 1200px)
+    font-size: toRem(14)
+    margin-top: toRem(25)
+
+.title
+  color: $primary-color
+  font-weight: 600
+  font-size: toRem(20)
+  margin-bottom: toRem(16)
+  @media all and (max-width: 1200px)
+    font-size: toRem(18)
+
+.copywrite-footer
+  background-color: $black
+  color: $primary-color
+  font-weight: 400
+  font-size: toRem(14)
+  @media all and (max-width: 767px)
+    font-size: toRem(12)
+.copywrite-container
+  @extend %d-flex
+  @extend %justify-content-between
+  padding-top: toRem(10)
+  padding-bottom: toRem(10)
+  @media all and (max-width: 567px)
+    flex-direction: column
+    align-items: center
+    gap: toRem(13)
+.copywrite-menu
+  @extend %d-flex
+  list-style: none
+  .nav-link
+    margin-left: toRem(25)
+    @media all and (max-width: 567px)
+      margin-left: toRem(10)
+      margin-right: toRem(10)
+    color: $primary-color
+    &:hover,
+    &:focus,
+    &:active,
+    &:visited
+      color: $primary-color
+
+

@@ -1,0 +1,82 @@
+.hero-contact
+  @media all and (min-width: 1201px)
+    margin-top: toRem(70)
+  @media all and (max-width: 1200px)
+    margin-top: toRem(26)
+
+.contact
+  &-section
+    background-color: rgba($base-color, .07)
+    padding: toRem(75) 0
+    margin-top: toRem(87)
+    @media all and (max-width: 767px)
+      padding: toRem(60) 0
+    .container
+      @extend %d-grid
+      grid-template-columns: 52% 1fr
+      grid-gap: toRem(25)
+      @media all and (max-width: 767px)
+        grid-template-columns: 100%
+        grid-gap: toRem(40)
+  &-map
+    border-radius: toRem(20)
+    overflow: hidden
+    min-height: toRem(230)
+  &-info
+    border: 2px solid rgba($base-color, .17)
+    border-radius: toRem(20)
+    padding: toRem(41)
+    @media all and (max-width: 767px)
+      padding: toRem(20)
+    &-list
+      list-style: none
+      margin-bottom: toRem(38)
+    &-item
+      @extend %d-flex
+      align-items: center
+      gap: toRem(27)
+      border-bottom: 2px solid rgba($base-color, .04)
+      padding: toRem(32) toRem(22)
+    &-link
+      font-weight: 500
+      font-size: toRem(22)
+      color: $base-color
+      &:hover,
+      &:focus,
+      &:visited,
+      &:active
+        color: $base-color
+      @media all and (max-width: 1200px)
+        font-size: toRem(16)
+
+.social
+  &-icons
+    @extend %d-flex
+    align-items: center
+    gap: toRem(47)
+    margin-top: toRem(24)
+    list-style: none
+    margin-bottom: toRem(24)
+    @media all and (max-width: 1200px)
+      gap: toRem(20)
+
+    .facebook,
+    .linkedin,
+    .instagram
+      width: toRem(42)
+      height: toRem(42)
+      @media all and (max-width: 1200px)
+        width: toRem(32)
+        height: toRem(32)
+    .twitter
+      width: toRem(47)
+      height: toRem(38)
+      @media all and (max-width: 1200px)
+        width: toRem(35)
+        height: toRem(28)
+    .youtube
+      width: toRem(48)
+      height: toRem(34)
+      @media all and (max-width: 1200px)
+        width: toRem(36)
+        height: toRem(25)

@@ -1,0 +1,50 @@
+.blog-items
+  margin: toRem(65) 0
+  @media all and (max-width: 767px)
+    margin: toRem(57) 0
+  &-init
+    @extend %d-grid
+    grid-gap: toRem(30)
+    position: relative
+    @media all and (min-width: 1001px)
+      grid-template-columns: repeat(3, calc((100% - 60px) / 3))
+    @media all and (max-width: 1000px)
+      grid-template-columns: repeat(2, calc((100% - 30px) / 2))
+    @media all and (max-width: 567px)
+      grid-template-columns: 100%
+
+.pagination
+  @extend %d-flex
+  flex-wrap: wrap
+  justify-content: center
+  gap: toRem(16)
+  margin-bottom: toRem(80)
+  list-style: none
+  @media  all and (max-width: 767px)
+    gap: toRem(10)
+    margin-bottom: toRem(57)
+  .page-link
+    @extend %d-flex
+    justify-content: center
+    align-items: center
+    flex-shrink: 0
+    color: $base-color
+    font-size: toRem(14)
+    width: toRem(30)
+    height: toRem(30)
+    border-radius: 50%
+    border: 1px solid rgba(8, 14, 66, 0.17)
+    &.prev
+      transform: rotate(180deg)
+    .arrow-path
+      fill: $base-color
+    &:hover:not(.disabled),
+    &.active
+      background: $base-color
+      color: $primary-color
+      .arrow-path
+        fill: $primary-color
+    &.disabled
+      opacity: .6
+      cursor: default
+

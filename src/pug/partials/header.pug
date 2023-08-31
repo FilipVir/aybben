@@ -1,0 +1,16 @@
+header.header
+    div.container.navbar
+        a(href='/index.html')
+            img.navbar-logo(src='/assets/images/logo.svg' alt='aybben')
+        button.navbar-toggle
+            img(src='/assets/images/toggle.svg' alt='toggle')
+        nav.navigation
+            ul.collapse
+                li.nav-item
+                    button.navbar-close
+                        img(src='/assets/images/close.svg' alt='close')
+                each item in [{text:'Home',link:'/index.html', active: false},{text:'Our Expertise',link:'/our-expertise.html',active: true}, {text:'Industries',link:'/industries.html',active: false},{text: 'About us',link:'/about-us.html',active: false},{text:'Contact Us',link:'/contact-us.html',active: false}, {text:'Blog',link:'/blog.html',active: false}]
+                    li.nav-item
+                        a.nav-link(href=item.link class=item.active ? 'active' : '')
+                            span= item.text
+            a.gradient-btn(href='/contact-us.html') Contact Us
