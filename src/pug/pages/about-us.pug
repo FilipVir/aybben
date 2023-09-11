@@ -1,5 +1,7 @@
 extends ../layouts/default-layout.pug
 include ../mixins/general-block.pug
+include ../partials/contact-us
+
 
 block content
     main.wrapper
@@ -59,4 +61,6 @@ block content
                         img.about-image(src='/assets/images/about/8.jpg' alt='')
         section.contact-block
             div.container
-                include ../partials/contact-us.pug
+                -
+                    var text = 'We invite you to reach out to us to learn more about our services or discuss how we can help your business thrive. Let\'s embark on a collaborative journey to unlock the full potential of your digital presence.'
+                +contact-section(text)

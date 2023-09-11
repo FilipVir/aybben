@@ -7,15 +7,8 @@
   @media all and (min-width: 567px)
     text-align: center
   .gradient-btn
-    @media all and (min-width: 1201px)
-    $fz: toRem(30)
-    $padding: toRem(20) toRem(75)
-    @media all and (max-width: 767px)
-      $fz: toRem(20)
-      $padding: toRem(18) toRem(55)
     @media all and (max-width: 567px)
       display: block
-    @include button($fz, $padding)
     margin: toRem(50) auto toRem(100)
 
 .our-successes
@@ -78,21 +71,29 @@
 .arrow-block
   text-align: center
   margin-top: toRem(39)
-  margin-bottom: toRem(95)
   @media all and (max-width: 567px)
     display: none
 
+.our-expertise-section
+  @media all and (min-width: 1201px)
+    padding-top: toRem(95)
+  @media all and (max-width: 767px)
+    $padding-top: toRem(45)
+
 .industry-section
   position: relative
-  margin: toRem(130) 0 toRem(90)
+  padding: toRem(130) 0 toRem(90)
   @media all and (max-width: 1200px)
-    margin: toRem(45) 0 toRem(40)
+    padding: toRem(45) 0 toRem(40)
 
 .slider-block
   position: relative
   margin-top: toRem(40)
   max-width: 100vw
+  @media all and (min-width: 1200px)
+    padding-left: toRem(70)
   @media all and (max-width: 767px)
+    padding-left: toRem(15)
     margin-top: toRem(24)
   &::after
     content: ''
@@ -149,8 +150,8 @@
     gap: toRem(27)
     .btn-outline
       @media all and (min-width: 768px)
-        $fz: toRem(30)
-        $padding: toRem(16) toRem(32)
+        $fz: toRem(24)
+        $padding: toRem(19.2) toRem(32)
         @include button-outline($fz, $padding)
       @media all and (max-width: 767px)
         $fz: toRem(14)

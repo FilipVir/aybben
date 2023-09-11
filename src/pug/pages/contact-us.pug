@@ -1,6 +1,7 @@
 extends ../layouts/default-layout.pug
 include ../mixins/general-block.pug
 include ../mixins/tab-item.pug
+include ../partials/contact-us
 include ../mixins/card-slider.pug
 block content
     main.wrapper
@@ -8,7 +9,10 @@ block content
             div.bubble
             div.bubble-2
             div.container
-                include ../partials/contact-us.pug
+
+                -
+                    var text = 'Leave us a message directly through the contact form below, and our team will get back to you promptly.'
+                +contact-section(text)
         section.contact-section
             div.container
                 div.contact-map
