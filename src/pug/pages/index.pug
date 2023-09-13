@@ -2,6 +2,8 @@ extends ../layouts/default-layout.pug
 include ../mixins/general-block.pug
 include ../mixins/tab-item.pug
 include ../mixins/card-slider.pug
+include ../partials/contact-us
+
 block content
     main.wrapper
         section.hero-section.container
@@ -14,7 +16,7 @@ block content
                     text: 'Revolutionize the IT industry with our innovative solutions at Aybben Tech. Thrive in the ever-changing digital landscape with our passion for excellence and commitment to staying ahead.',
                     key: 'description'
                 }])
-            a.gradient-btn(href='/about-us.html') Contact Us
+            a.gradient-btn.btn-solid(href='/about-us.html') Contact Us
         section.our-successes
             ul.container.our-successes-list
                 each item in [{number: '+10',text:'projects'},{number: '+20',text:'professionals'},{number: '100%',text:'job success'},{number: '+30',text:'technologies'}]
@@ -24,7 +26,7 @@ block content
         div.arrow-block
             a(href='/sa')
                 img(src='/assets/images/arrow-bottom.svg' alt='')
-        section
+        section#our-expertise.our-expertise-section
             div.container
                 +general-block([{tag: 'h2', text: 'Our Expertise', key: 'title'}])
 
@@ -34,7 +36,7 @@ block content
                         if item.active
                             button.nav-link.active(type='button' data-id='tab-' + index)= item.text
                         else
-                            button.nav-link(type='button' data-id='tab-'+ index)= item.text
+                            button.nav-link(type='button' data-id='tab-' + index)= item.text
             div.tab-content
                 div.container
                     -
@@ -77,7 +79,7 @@ block content
                         }]
                     each item,index in data
                         +tab-item(item,index)
-        section.industry-section
+        section#industry-section.industry-section
             div.bubble
             div.bubble-2
             div.container
@@ -88,18 +90,17 @@ block content
                         key: 'description'
                     }])
             section.slider-block
-                div.container
-                    div.slider.owl-carousel
-                        -
-                            var data = [
-                            {image: 'loT.png',title: 'IoT',description: 'We connect devices and systems, unlocking new possibilities in connectivity and automation.'},
-                            {image: 'healthcare.jpg',title: 'Healthcare',description: 'We leverage technology to enhance healthcare delivery and improve patient outcomes.'},
-                            {image: 'communications.jpg',title: 'Communications',description: 'We enable seamless and efficient communication for businesses, empowering collaboration and productivity.'},
-                            {image: 'business.jpg',title: 'Business / IT services',description: 'We provide comprehensive IT solutions and services to streamline operations and drive business success.'}
-                            ]
-                        each item in data
-                            div
-                                +card-slider(item)
+                div.slider.owl-carousel
+                    -
+                        var data = [
+                        {image: 'loT.png',title: 'IoT',description: 'We connect devices and systems, unlocking new possibilities in connectivity and automation.'},
+                        {image: 'healthcare.jpg',title: 'Healthcare',description: 'We leverage technology to enhance healthcare delivery and improve patient outcomes.'},
+                        {image: 'communications.jpg',title: 'Communications',description: 'We enable seamless and efficient communication for businesses, empowering collaboration and productivity.'},
+                        {image: 'business.jpg',title: 'Business / IT services',description: 'We provide comprehensive IT solutions and services to streamline operations and drive business success.'}
+                        ]
+                    each item in data
+                        div
+                            +card-slider(item)
         section.about-block
             div.container.about-init
                 +general-block([{tag: 'h2', text: 'About Us', key: 'title'}])
@@ -109,5 +110,7 @@ block content
                     a.btn-solid(href='')= 'Contact Us'
         section.contact-block
             div.container
-                include ../partials/contact-us.pug
+                -
+                    var text = 'We invite you to reach out to us to learn more about our services or discuss how we can help your business thrive. Let\'s embark on a collaborative journey to unlock the full potential of your digital presence.'
+                +contact-section(text)
 

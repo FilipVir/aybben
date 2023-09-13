@@ -9,9 +9,10 @@ $base-font-size: 16
   color: $primary-color
   display: inline-block
   background: linear-gradient(247.19deg, #247EE0 0.32%, #2578DA 18.78%, #2767C8 45.01%, #2B4BAC 74.16%, #2E3191 96.51%)
-  box-shadow: 4px 4px 14px 0 rgba(37, 121, 219, .14)
+  box-shadow: 4px 4px 14px 0 rgba(37, 121, 219, .4)
   border-radius: 50px
-  border: 2px solid #2B45A6
+  border: none
+  font-weight: 600
   font-size: $fs
   padding: $padding
   text-decoration: none
@@ -28,15 +29,18 @@ $base-font-size: 16
   background: transparent
   border-radius: 50px
   border: 2px solid $base-color
+  font-weight: 600
   font-size: $fs
   padding: $padding
   text-decoration: none
   text-align: center
-  &:hover,
+  &:not(.active):hover
+    background-color: #F0F0F0
+
   &.active
     color: $primary-color
     background: linear-gradient(247.19deg, #247EE0 0.32%, #2578DA 18.78%, #2767C8 45.01%, #2B4BAC 74.16%, #2E3191 96.51%)
-    box-shadow: 4px 4px 14px 0 rgba(37, 121, 219, .14)
+    box-shadow: 4px 4px 14px 0 rgba(37, 121, 219, .4)
     border-color: #2B45A6
   @media all and (min-width: 1200px)
     height: toRem(54)

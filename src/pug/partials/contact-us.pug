@@ -1,20 +1,21 @@
 include ../mixins/input.pug
 include ../mixins/general-block.pug
 
-div.contact-component
-    +general-block([{tag: 'h2', text: 'Get In Touch', key: 'title'},
-        {
-            tag: 'p',
-            text: 'We invite you to reach out to us to learn more about our services or discuss how we can help your business thrive. Let\'s embark on a collaborative journey to unlock the full potential of your digital presence.',
-            key: 'description'
-        }])
-    form
-        div.contact-init
-            +input-block({type: 'text', label: 'First Name', placeholder: 'Your first name', id: 'firstName'})
-            +input-block({type: 'text', label: 'Last Name', placeholder: 'Your last name', id: 'lastName'})
-            +input-block({type: 'email', label: 'Email', placeholder: 'Your email address', id: 'email'})
-            +input-block({type: 'tel', label: 'Phone Number', placeholder: '00 000000', id: 'tel'})
-            +input-block({type: 'textarea', label: 'Message', placeholder: 'Please enter your message here', id: 'message'})
-        button.btn-solid(type='submit', onclick='submitMessage(); return false;')= 'Submit'
 
+mixin contact-section(text)
+    div.contact-component
+        +general-block([{tag: 'h2', text: 'Get In Touch', key: 'title'},
+            {
+                tag: 'p',
+                text: text,
+                key: 'description'
+            }])
+        form
+            div.contact-init
+                +input-block({type: 'text', label: 'First Name', placeholder: 'Your first name'})
+                +input-block({type: 'text', label: 'Last Name', placeholder: 'Your last name'})
+                +input-block({type: 'email', label: 'Email', placeholder: 'Your email address'})
+                +input-block({type: 'tel', label: 'Phone Number', placeholder: '00 000000'})
+                +input-block({type: 'textarea', label: 'Message', placeholder: 'Please enter your message here'})
+            button.btn-solid(type='button')= 'Submit'
 
