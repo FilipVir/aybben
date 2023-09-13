@@ -14,170 +14,85 @@
   <body>
     <div class="app">
       <header class="header">
-        <div class="container navbar"><a href="/index.html"><img class="navbar-logo" src="./assets/images/logo.svg" alt="aybben"></a>
-          <button class="navbar-toggle"><img src="./assets/images/toggle.svg" alt="toggle"></button>
+        <div class="container navbar"><a href="/index.html"><img class="navbar-logo" src="/assets/images/logo.svg" alt="aybben"></a>
+          <button class="navbar-toggle"><img src="/assets/images/toggle.svg" alt="toggle"></button>
           <nav class="navigation">
             <ul class="collapse">
               <li class="nav-item">
-                <button class="navbar-close"><img src="./assets/images/close.svg" alt="close"></button>
+                <button class="navbar-close"><img src="/assets/images/close.svg" alt="close"></button>
               </li>
               <li class="nav-item"><a class="nav-link" href="/index.html"><span>Home</span></a></li>
-              <li class="nav-item"><a class="nav-link active" href="#our-expertise"><span>Our Expertise</span></a></li>
-              <li class="nav-item"><a class="nav-link" href="#industry-section"><span>Industries</span></a></li>
-              <li class="nav-item"><a class="nav-link" href="/about-us.html"><span>About us</span></a></li>
-              <li class="nav-item"><a class="nav-link" href="/contact-us.html"><span>Contact Us</span></a></li>
-              <li class="nav-item"><a class="nav-link" href="/blog.html"><span>Blog</span></a></li>
+              <li class="nav-item"><a class="nav-link" href="/index.html#our-expertise" onclick="setActiveUrl('our-expertise-link')" id="our-expertise-link"><span>Our Expertise</span></a></li>
+              <li class="nav-item"><a class="nav-link" href="/index.html#industry-section" onclick="setActiveUrl('industry-link')" id="industry-link"><span>Industries</span></a></li>
+              <li class="nav-item"><a class="nav-link" href="/about-us.html" onclick="setActiveUrl('about-us-link')" id="about-us"><span>About us</span></a></li>
+              <li class="nav-item"><a class="nav-link" href="/contact-us.html" onclick="setActiveUrl('contact-us')" id="contact-us"><span>Contact Us</span></a></li>
+              <li class="nav-item"><a class="nav-link" href="/blog.html" onclick="setActiveUrl('blog')" id="blog"><span>Blog</span></a></li>
             </ul><a class="gradient-btn" href="/contact-us.html">Contact Us</a>
           </nav>
         </div>
       </header>
       <main class="wrapper">
-        <section class="hero-section container">
-          <div class="bubble"></div>
-          <h1 class="general-title">Blog</h1>
-          <p class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+        <div class="bubble"></div>
+        <div class="bubble-2"></div>
+        <section class="container coming-soon-sectiom">
+          <h1 class="coming-soon"><span>Coming</span><span>Soon</span></h1>
         </section>
-        <section class="blog-items">
-          <div class="bubble"></div>
-          <div class="container blog-items-init">
-            <div>
-              <article class="card-item">
-                <figure class="card-figure"><img class="card-image" src="./assets/images/blog/1.jpg" alt=""/></figure>
-                <div class="card-info">
-                  <h3 class="card-title">Lorem Ipsum is simply dummy</h3>
-                  <p class="card-description">Lorem ake a type specimen book. It has survived not only five centuries, bupeschanged.</p><a class="card-link">Read More</a>
-                </div>
-              </article>
-            </div>
-            <div>
-              <article class="card-item">
-                <figure class="card-figure"><img class="card-image" src="./assets/images/blog/2.jpg" alt=""/></figure>
-                <div class="card-info">
-                  <h3 class="card-title">Lorem Ipsum is simply dummy</h3>
-                  <p class="card-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p><a class="card-link">Read More</a>
-                </div>
-              </article>
-            </div>
-            <div>
-              <article class="card-item">
-                <figure class="card-figure"><img class="card-image" src="./assets/images/blog/3.jpg" alt=""/></figure>
-                <div class="card-info">
-                  <h3 class="card-title">Lorem Ipsum is simply dummy</h3>
-                  <p class="card-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p><a class="card-link">Read More</a>
-                </div>
-              </article>
-            </div>
-            <div>
-              <article class="card-item">
-                <figure class="card-figure"><img class="card-image" src="./assets/images/blog/1.jpg" alt=""/></figure>
-                <div class="card-info">
-                  <h3 class="card-title">Lorem Ipsum is simply dummy</h3>
-                  <p class="card-description">Lorem ake a type specimen book. It has survived not only five centuries, bupeschanged.</p><a class="card-link">Read More</a>
-                </div>
-              </article>
-            </div>
-            <div>
-              <article class="card-item">
-                <figure class="card-figure"><img class="card-image" src="./assets/images/blog/2.jpg" alt=""/></figure>
-                <div class="card-info">
-                  <h3 class="card-title">Lorem Ipsum is simply dummy</h3>
-                  <p class="card-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p><a class="card-link">Read More</a>
-                </div>
-              </article>
-            </div>
-            <div>
-              <article class="card-item">
-                <figure class="card-figure"><img class="card-image" src="./assets/images/blog/3.jpg" alt=""/></figure>
-                <div class="card-info">
-                  <h3 class="card-title">Lorem Ipsum is simply dummy</h3>
-                  <p class="card-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p><a class="card-link">Read More</a>
-                </div>
-              </article>
-            </div>
-            <div>
-              <article class="card-item">
-                <figure class="card-figure"><img class="card-image" src="./assets/images/blog/1.jpg" alt=""/></figure>
-                <div class="card-info">
-                  <h3 class="card-title">Lorem Ipsum is simply dummy</h3>
-                  <p class="card-description">Lorem ake a type specimen book. It has survived not only five centuries, bupeschanged.</p><a class="card-link">Read More</a>
-                </div>
-              </article>
-            </div>
-            <div>
-              <article class="card-item">
-                <figure class="card-figure"><img class="card-image" src="./assets/images/blog/2.jpg" alt=""/></figure>
-                <div class="card-info">
-                  <h3 class="card-title">Lorem Ipsum is simply dummy</h3>
-                  <p class="card-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p><a class="card-link">Read More</a>
-                </div>
-              </article>
-            </div>
-            <div>
-              <article class="card-item">
-                <figure class="card-figure"><img class="card-image" src="./assets/images/blog/3.jpg" alt=""/></figure>
-                <div class="card-info">
-                  <h3 class="card-title">Lorem Ipsum is simply dummy</h3>
-                  <p class="card-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p><a class="card-link">Read More</a>
-                </div>
-              </article>
-            </div>
-            <div>
-              <article class="card-item">
-                <figure class="card-figure"><img class="card-image" src="./assets/images/blog/1.jpg" alt=""/></figure>
-                <div class="card-info">
-                  <h3 class="card-title">Lorem Ipsum is simply dummy</h3>
-                  <p class="card-description">Lorem ake a type specimen book. It has survived not only five centuries, bupeschanged.</p><a class="card-link">Read More</a>
-                </div>
-              </article>
-            </div>
-            <div>
-              <article class="card-item">
-                <figure class="card-figure"><img class="card-image" src="./assets/images/blog/2.jpg" alt=""/></figure>
-                <div class="card-info">
-                  <h3 class="card-title">Lorem Ipsum is simply dummy</h3>
-                  <p class="card-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p><a class="card-link">Read More</a>
-                </div>
-              </article>
-            </div>
-            <div>
-              <article class="card-item">
-                <figure class="card-figure"><img class="card-image" src="./assets/images/blog/3.jpg" alt=""/></figure>
-                <div class="card-info">
-                  <h3 class="card-title">Lorem Ipsum is simply dummy</h3>
-                  <p class="card-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p><a class="card-link">Read More</a>
-                </div>
-              </article>
-            </div>
-          </div>
-        </section>
-        <ul class="pagination">
-          <li class="page-item"><a class="page-link prev disabled" href="#">
-              <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path class="arrow-path" fill-rule="evenodd" clip-rule="evenodd" d="M1.76368 0.432013L7.08983 5.18513C7.41667 5.47681 7.41667 5.94971 7.08983 6.24138L1.76368 10.9945C1.43684 11.2862 0.906931 11.2862 0.580091 10.9945C0.253252 10.7028 0.253252 10.2299 0.580091 9.93825L5.31445 5.71326L0.58009 1.48826C0.253251 1.19659 0.253251 0.723688 0.58009 0.432013C0.90693 0.140338 1.43684 0.140338 1.76368 0.432013Z"/>
-              </svg></a></li>
-          <li class="page-item"><a class="active page-link" href="#">1</a></li>
-          <li class="page-item"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item"><a class="page-link" href="#">4</a></li>
-          <li class="page-item"><a class="page-link" href="#">5</a></li>
-          <li class="page-item"><a class="page-link" href="#">6</a></li>
-          <li class="page-item"><a class="page-link next" href="#">
-              <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path class="arrow-path" fill-rule="evenodd" clip-rule="evenodd" d="M1.76368 0.432013L7.08983 5.18513C7.41667 5.47681 7.41667 5.94971 7.08983 6.24138L1.76368 10.9945C1.43684 11.2862 0.906931 11.2862 0.580091 10.9945C0.253252 10.7028 0.253252 10.2299 0.580091 9.93825L5.31445 5.71326L0.58009 1.48826C0.253251 1.19659 0.253251 0.723688 0.58009 0.432013C0.90693 0.140338 1.43684 0.140338 1.76368 0.432013Z"/>
-              </svg></a></li>
-        </ul>
       </main>
+      <!--main.wrapper-->
+      <!--    section.hero-section.container-->
+      <!--        div.bubble-->
+      <!--        +general-block([{tag: 'h1', text: 'Blog', key: 'title'},-->
+      <!--            {-->
+      <!--                tag: 'p',-->
+      <!--                text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',-->
+      <!--                key: 'description'-->
+      <!--            }])-->
+      <!---->
+      <!--    section.blog-items-->
+      <!--        div.bubble-->
+      <!---->
+      <!--        div.container.blog-items-init-->
+      <!--            --->
+      <!--                var data = [-->
+      <!--                {image:'1.jpg',title:'Lorem Ipsum is simply dummy',description:'Lorem ake a type specimen book. It has survived not only five centuries, bupeschanged.',link:'/'},-->
+      <!--                {image:'2.jpg',title:'Lorem Ipsum is simply dummy',description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',link:'/'},-->
+      <!--                {image:'3.jpg',title:'Lorem Ipsum is simply dummy',description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',link:'/'},-->
+      <!--                {image:'1.jpg',title:'Lorem Ipsum is simply dummy',description:'Lorem ake a type specimen book. It has survived not only five centuries, bupeschanged.',link:'/'},-->
+      <!--                {image:'2.jpg',title:'Lorem Ipsum is simply dummy',description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',link:'/'},-->
+      <!--                {image:'3.jpg',title:'Lorem Ipsum is simply dummy',description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',link:'/'},-->
+      <!--                {image:'1.jpg',title:'Lorem Ipsum is simply dummy',description:'Lorem ake a type specimen book. It has survived not only five centuries, bupeschanged.',link:'/'},-->
+      <!--                {image:'2.jpg',title:'Lorem Ipsum is simply dummy',description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',link:'/'},-->
+      <!--                {image:'3.jpg',title:'Lorem Ipsum is simply dummy',description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',link:'/'},-->
+      <!--                {image:'1.jpg',title:'Lorem Ipsum is simply dummy',description:'Lorem ake a type specimen book. It has survived not only five centuries, bupeschanged.',link:'/'},-->
+      <!--                {image:'2.jpg',title:'Lorem Ipsum is simply dummy',description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',link:'/'},-->
+      <!--                {image:'3.jpg',title:'Lorem Ipsum is simply dummy',description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',link:'/'}-->
+      <!--                ]-->
+      <!--            each item in data-->
+      <!--                div-->
+      <!--                    +card-item(item)-->
+      <!--    ul.pagination-->
+      <!--        li.page-item-->
+      <!--            a.page-link.prev.disabled(href='#')-->
+      <!--                svg(width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg")-->
+      <!--                    path(class="arrow-path" fill-rule="evenodd" clip-rule="evenodd" d="M1.76368 0.432013L7.08983 5.18513C7.41667 5.47681 7.41667 5.94971 7.08983 6.24138L1.76368 10.9945C1.43684 11.2862 0.906931 11.2862 0.580091 10.9945C0.253252 10.7028 0.253252 10.2299 0.580091 9.93825L5.31445 5.71326L0.58009 1.48826C0.253251 1.19659 0.253251 0.723688 0.58009 0.432013C0.90693 0.140338 1.43684 0.140338 1.76368 0.432013Z")/-->
+      <!--        each page in [1,2,3,4,5,6]-->
+      <!--            li.page-item-->
+      <!--                a(href='#' class= page=='1' ? 'active page-link' : 'page-link')= page-->
+      <!--        li.page-item-->
+      <!--            a.page-link.next(href='#')-->
+      <!--                svg(width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg")-->
+      <!--                    path(class="arrow-path" fill-rule="evenodd" clip-rule="evenodd" d="M1.76368 0.432013L7.08983 5.18513C7.41667 5.47681 7.41667 5.94971 7.08983 6.24138L1.76368 10.9945C1.43684 11.2862 0.906931 11.2862 0.580091 10.9945C0.253252 10.7028 0.253252 10.2299 0.580091 9.93825L5.31445 5.71326L0.58009 1.48826C0.253251 1.19659 0.253251 0.723688 0.58009 0.432013C0.90693 0.140338 1.43684 0.140338 1.76368 0.432013Z")/-->
       <footer class="footer">
         <nav class="container footer-menu">
-          <div class="first-block"><a href="/index.html"><img class="navbar-logo" src="./assets/images/footer-logo.svg" alt="aybben"></a>
+          <div class="first-block"><a href="/index.html"><img class="navbar-logo" src="/assets/images/footer-logo.svg" alt="aybben"></a>
             <div>
               <h3 class="title-share">Follow Us</h3>
               <ul class="nav-icons">
-                <li><a><img src="./assets/images/fb.svg" alt=""></a></li>
-                <li><a><img src="./assets/images/instagram.svg" alt=""></a></li>
-                <li><a><img src="./assets/images/twetter.svg" alt=""></a></li>
-                <li><a><img src="./assets/images/linkedin.svg" alt=""></a></li>
-                <li><a><img src="./assets/images/youtube.svg" alt=""></a></li>
+                <li><a><img src="/assets/images/fb.svg" alt=""></a></li>
+                <li><a><img src="/assets/images/instagram.svg" alt=""></a></li>
+                <li><a><img src="/assets/images/twetter.svg" alt=""></a></li>
+                <li><a><img src="/assets/images/linkedin.svg" alt=""></a></li>
+                <li><a><img src="/assets/images/youtube.svg" alt=""></a></li>
               </ul>
             </div>
           </div>

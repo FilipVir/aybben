@@ -1690,6 +1690,16 @@ a {
     height: 1.5625rem;
   }
 }
+.success-message {
+  color: green;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 14px;
+  display: none;
+}
+
 .hero-section.about {
   padding-bottom: 8.125rem;
 }

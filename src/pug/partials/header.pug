@@ -9,8 +9,8 @@ header.header
                 li.nav-item
                     button.navbar-close
                         img(src='/assets/images/close.svg' alt='close')
-                each item in [{text:'Home',link:'/index.html', active: false},{text:'Our Expertise',link:'#our-expertise',active: true}, {text:'Industries',link:'#industry-section',active: false},{text: 'About us',link:'/about-us.html',active: false},{text:'Contact Us',link:'/contact-us.html',active: false}, {text:'Blog',link:'/blog.html',active: false}]
+                each item in [{text:'Home',link:'/index.html', active: false},{text:'Our Expertise',link:'/index.html#our-expertise',active: true, onclick:'setActiveUrl(\'our-expertise-link\')', id:'our-expertise-link'}, {text:'Industries',link:'/index.html#industry-section',active: false, onclick:'setActiveUrl(\'industry-link\')', id:'industry-link'},{text: 'About us',link:'/about-us.html',active: false, onclick:'setActiveUrl(\'about-us-link\')', id:'about-us'},{text:'Contact Us',link:'/contact-us.html',active: false, onclick:'setActiveUrl(\'contact-us\')', id:'contact-us'}, {text:'Blog',link:'/blog.html',active: false, onclick:'setActiveUrl(\'blog\')', id:'blog'}]
                     li.nav-item
-                        a.nav-link(href=item.link class=item.active ? 'active' : '')
+                        a.nav-link(href=item.link onclick=item.onclick id=item.id)
                             span= item.text
             a.gradient-btn(href='/contact-us.html') Contact Us
