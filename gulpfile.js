@@ -5,8 +5,16 @@ var gulp    = require('gulp'),
     plumber = require('gulp-plumber'),
     rename  = require('gulp-rename'),
     uglify  = require('gulp-uglify'),
-    autoprefixer = require('gulp-autoprefixer');
+    autoprefixer = require('gulp-autoprefixer'),
+    replace = require('gulp-replace');
 
+function replaceImagePaths() {
+  return (
+      gulp.src('*.html') // Adjust the source file pattern as needed
+          .pipe(replace('src="/assets/', 'src="./assets/'))
+          .pipe(gulp.dest('./'))
+  );
+}
 function reload(done) {
   connect.server({
     livereload: true,
@@ -74,7 +82,7 @@ function watchTask(done) {
 }
 
 const watch = gulp.parallel(watchTask, reload);
-const build = gulp.series(gulp.parallel(styles, scripts, html, views));
+const build = gulp.series(gulp.parallel(styles, scripts, html, views), replaceImagePaths);
 
 exports.reload = reload;
 exports.styles = styles;

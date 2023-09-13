@@ -10,10 +10,11 @@ div.contact-component
         }])
     form
         div.contact-init
-            +input-block({type: 'text', label: 'First Name', placeholder: 'Your first name'})
-            +input-block({type: 'text', label: 'Last Name', placeholder: 'Your last name'})
-            +input-block({type: 'email', label: 'Email', placeholder: 'Your email address'})
-            +input-block({type: 'tel', label: 'Phone Number', placeholder: '00 000000'})
-            +input-block({type: 'textarea', label: 'Message', placeholder: 'Please enter your message here'})
-        button.btn-solid(type='button')= 'Submit'
+            +input-block({type: 'text', label: 'First Name', placeholder: 'Your first name', id: 'firstName'})
+            +input-block({type: 'text', label: 'Last Name', placeholder: 'Your last name', id: 'lastName'})
+            +input-block({type: 'email', label: 'Email', placeholder: 'Your email address', id: 'email'})
+            +input-block({type: 'tel', label: 'Phone Number', placeholder: '00 000000', id: 'tel'})
+            +input-block({type: 'textarea', label: 'Message', placeholder: 'Please enter your message here', id: 'message'})
+        button.btn-solid(type='submit', onclick='submitMessage(); return false;')= 'Submit'
+
 

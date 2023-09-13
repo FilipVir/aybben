@@ -14,20 +14,20 @@
   <body>
     <div class="app">
       <header class="header">
-        <div class="container navbar"><a href="./index.html"><img class="navbar-logo" src="./assets/images/logo.svg" alt="aybben"></a>
+        <div class="container navbar"><a href="/index.html"><img class="navbar-logo" src="./assets/images/logo.svg" alt="aybben"></a>
           <button class="navbar-toggle"><img src="./assets/images/toggle.svg" alt="toggle"></button>
           <nav class="navigation">
             <ul class="collapse">
               <li class="nav-item">
                 <button class="navbar-close"><img src="./assets/images/close.svg" alt="close"></button>
               </li>
-              <li class="nav-item"><a class="nav-link" href="./index.html"><span>Home</span></a></li>
-              <li class="nav-item"><a class="nav-link active" href="./our-expertise.html"><span>Our Expertise</span></a></li>
-              <li class="nav-item"><a class="nav-link" href="./industries.html"><span>Industries</span></a></li>
-              <li class="nav-item"><a class="nav-link" href="./about-us.html"><span>About us</span></a></li>
-              <li class="nav-item"><a class="nav-link" href="./contact-us.html"><span>Contact Us</span></a></li>
-              <li class="nav-item"><a class="nav-link" href="./blog.html"><span>Blog</span></a></li>
-            </ul><a class="gradient-btn" href="./contact-us.html">Contact Us</a>
+              <li class="nav-item"><a class="nav-link" href="/index.html"><span>Home</span></a></li>
+              <li class="nav-item"><a class="nav-link active" href="/our-expertise.html"><span>Our Expertise</span></a></li>
+              <li class="nav-item"><a class="nav-link" href="/industries.html"><span>Industries</span></a></li>
+              <li class="nav-item"><a class="nav-link" href="/about-us.html"><span>About us</span></a></li>
+              <li class="nav-item"><a class="nav-link" href="/contact-us.html"><span>Contact Us</span></a></li>
+              <li class="nav-item"><a class="nav-link" href="/blog.html"><span>Blog</span></a></li>
+            </ul><a class="gradient-btn" href="/contact-us.html">Contact Us</a>
           </nav>
         </div>
       </header>
@@ -42,34 +42,34 @@
               <form>
                 <div class="contact-init">
                               <div class="input-group">
-                                <label class="input-label">First Name</label>
-                                <input class="input-item" type="text" placeholder="Your first name"/>
+                                <label class="input-label" for="firstName">First Name</label>
+                                <input class="input-item" type="text" placeholder="Your first name" id="firstName">
                               </div>
                               <div class="input-group">
-                                <label class="input-label">Last Name</label>
-                                <input class="input-item" type="text" placeholder="Your last name"/>
+                                <label class="input-label" for="lastName">Last Name</label>
+                                <input class="input-item" type="text" placeholder="Your last name" id="lastName">
                               </div>
                               <div class="input-group">
-                                <label class="input-label">Email</label>
-                                <input class="input-item" type="email" placeholder="Your email address"/>
+                                <label class="input-label" for="email">Email</label>
+                                <input class="input-item" type="email" placeholder="Your email address" id="email">
                               </div>
                               <div class="input-group">
-                                <label class="input-label">Phone Number</label>
+                                <label class="input-label" for="tel">Phone Number</label>
                                 <div class="pone-group">
                                   <div class="pone-dropdown"><img class="flug" src="./assets/images/usa.png"><span class="code">+1</span>
                                     <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                                       <path d="M4.5 5.01489L0.602885 0.514893L8.39711 0.514893L4.5 5.01489Z" fill="#1E283E"/>
                                     </svg>
                                   </div>
-                                  <input class="tel-item" type="tel" placeholder="00 000000">
+                                  <input class="tel-item" type="tel" placeholder="00 000000" id="tel">
                                 </div>
                               </div>
                               <div class="input-group">
-                                <label class="input-label">Message</label>
-                                <textarea class="input-item" type="textarea" placeholder="Please enter your message here"></textarea>
+                                <label class="input-label" for="message">Message</label>
+                                <textarea class="input-item" type="textarea" placeholder="Please enter your message here" id="message"></textarea>
                               </div>
                 </div>
-                <button class="btn-solid" type="button">Submit</button>
+                <button class="btn-solid" type="submit" onclick="submitMessage(); return false;">Submit</button>
               </form>
             </div>
           </div>
@@ -83,17 +83,17 @@
               <ul class="contact-info-list">
                 <li class="contact-info-item">
                   <svg width="27" height="28" viewBox="0 0 27 28">
-                    <use xlink:href="./assets/images/sprite.svg#phone"></use>
+                    <use xlink:href="/assets/images/sprite.svg#phone"></use>
                   </svg><a class="contact-info-link" href="tel: +374 77 299653">+374 77 299653</a>
                 </li>
                 <li class="contact-info-item">
                   <svg width="31" height="25" viewBox="0 0 31 25">
-                    <use xlink:href="./assets/images/sprite.svg#email"></use>
+                    <use xlink:href="/assets/images/sprite.svg#email"></use>
                   </svg><a class="contact-info-link" href="mailTo: gurgen@aybbentech.com">gurgen@aybbentech.com</a>
                 </li>
                 <li class="contact-info-item">
                   <svg width="21" height="31" viewBox="0 0 21 31">
-                    <use xlink:href="./assets/images/sprite.svg#location"></use>
+                    <use xlink:href="/assets/images/sprite.svg#location"></use>
                   </svg><a class="contact-info-link" href="https://goo.gl/maps/dfkp1u73Au5itjKV7">1 Gayi str., Gyumri, Armenia</a>
                 </li>
               </ul>
@@ -102,23 +102,23 @@
                 <ul class="social-icons">
                   <li><a class="social-link" href="#">
                       <svg class="facebook" viewBox="0 0 44 44">
-                        <use xlink:href="./assets/images/sprite.svg#facebook"></use>
+                        <use xlink:href="/assets/images/sprite.svg#facebook"></use>
                       </svg></a></li>
                   <li><a>
                       <svg class="instagram" viewBox="0 0 44 44">
-                        <use xlink:href="./assets/images/sprite.svg#instagram"></use>
+                        <use xlink:href="/assets/images/sprite.svg#instagram"></use>
                       </svg></a></li>
                   <li><a>
                       <svg class="twitter" viewBox="0 0 44 44">
-                        <use xlink:href="./assets/images/sprite.svg#twitter"></use>
+                        <use xlink:href="/assets/images/sprite.svg#twitter"></use>
                       </svg></a></li>
                   <li><a>
                       <svg class="linkedin" viewBox="0 0 44 44">
-                        <use xlink:href="./assets/images/sprite.svg#linkedin"></use>
+                        <use xlink:href="/assets/images/sprite.svg#linkedin"></use>
                       </svg></a></li>
                   <li><a>
                       <svg class="youtube" viewBox="0 0 44 44">
-                        <use xlink:href="./assets/images/sprite.svg#youtube"></use>
+                        <use xlink:href="/assets/images/sprite.svg#youtube"></use>
                       </svg></a></li>
                 </ul>
               </div>
@@ -143,12 +143,12 @@
           <div>
             <h3 class="title">Pages</h3>
             <ul class="nav-menu">
-              <<li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
-              <<li class="nav-item"><a class="nav-link" href="./our-expertise.html">Our Expertise</a></li>
-              <<li class="nav-item"><a class="nav-link" href="./industries.html">Industries</a></li>
-              <<li class="nav-item"><a class="nav-link" href="./about-us.html">About us</a></li>
-              <<li class="nav-item"><a class="nav-link" href="./blog.html">Blog</a></li>
-              <<li class="nav-item"><a class="nav-link" href="./contact-us.html">Contact Us</a></li>
+              <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="/our-expertise.html">Our Expertise</a></li>
+              <li class="nav-item"><a class="nav-link" href="/industries.html">Industries</a></li>
+              <li class="nav-item"><a class="nav-link" href="/about-us.html">About us</a></li>
+              <li class="nav-item"><a class="nav-link" href="/blog.html">Blog</a></li>
+              <li class="nav-item"><a class="nav-link" href="/contact-us.html">Contact Us</a></li>
             </ul>
           </div>
           <div class="third-block">
@@ -180,5 +180,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="./assets/js/scripts.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
   </body>
 </html>
