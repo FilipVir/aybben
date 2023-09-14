@@ -7,15 +7,11 @@
     <list default="true" id="809b5dd6-5412-47df-85a9-11e26fd85894" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/about-us.html" beforeDir="false" afterPath="$PROJECT_DIR$/about-us.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/scripts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/scripts.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/scripts.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contact-us.html" beforeDir="false" afterPath="$PROJECT_DIR$/contact-us.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/our-expertise.html" beforeDir="false" afterPath="$PROJECT_DIR$/our-expertise.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/scripts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pug/pages/contact-us.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/pug/pages/contact-us.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pug/partials/footer.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/pug/partials/footer.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pug/base/base.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/pug/base/base.pug" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
