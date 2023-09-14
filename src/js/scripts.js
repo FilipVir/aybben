@@ -18,8 +18,8 @@ function submitMessage() {
 
     if (message.value !== "" && email.value !== "" && isValidEmail(email.value) ) {
         Email.send({
-            SecureToken: "39bdb564-a04e-45f1-a58d-b165886a8ad8",
-            To: 'filip@10web.io',
+            SecureToken: "f810f96d-23f1-49b3-890e-3a89fe33900e",
+            To: 'info@aybbentech.com',
             From: email.value,
             Subject: firstName.value + ' ' + lastName.value,
             Body: generateEmailTemplate(firstName.value, lastName.value, tel.value, message.value)
