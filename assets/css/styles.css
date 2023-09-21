@@ -1862,6 +1862,28 @@ a {
     margin-bottom: 2.5rem;
   }
 }
+.long-image {
+  max-height: 360px;
+}
+
+@media all and (max-width: 767px) {
+  .long-image {
+    max-height: 214px;
+  }
+}
+.wide-image {
+  max-width: 278px;
+}
+
+.short-image {
+  max-height: 343px;
+}
+
+@media all and (max-width: 767px) {
+  .short-image {
+    max-height: 214px;
+  }
+}
 .about-us {
   margin-bottom: 8.125rem;
 }

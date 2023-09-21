@@ -6,8 +6,8 @@ include ../partials/contact-us
 block content
     main.wrapper
         section.hero-section.about
-            div.bubble
-            div.bubble-2
+            //div.bubble
+            //div.bubble-2
             div.container.about-init
                 +general-block([{tag: 'h1', text: 'Welcome to Aybben Tech', key: 'title'}])
                 p.description  We are a passionate team of technology enthusiasts committed to empowering businesses in the digital world.
@@ -18,8 +18,8 @@ block content
         section.about-us
             article.container.about-item
                 div.figure-group
-                    figure.about-figure
-                        img.about-image(src='/assets/images/about/1.jpg' alt='')
+                    figure.about-figure.wide-image
+                        img.about-image(src='/assets/images/about/1.png' alt='')
                     figure.about-figure
                         img.about-image(src='/assets/images/about/2.jpg' alt='')
                 section
@@ -28,7 +28,7 @@ block content
 
 
             article.container.about-item
-                div.bubble
+                //div.bubble
                 section
                     h3.about-title Client-Centric Approach
                     p.about-description We firmly believe that understanding our clients' unique needs and aspirations is crucial to their success. By taking a client-centric approach, we establish deep partnerships, enabling us to provide personalized solutions that exceed expectations and deliver real value.
@@ -38,13 +38,13 @@ block content
                         figure.about-figure
                             img.about-image(src='/assets/images/about/3.jpg' alt='')
                         figure.about-figure
-                            img.about-image(src='/assets/images/about/4.jpg' alt='')
+                            img.about-image(src='/assets/images/about/4.png' alt='')
                     figure.about-figure
-                        img.about-image(src='/assets/images/about/5.jpg' alt='')
+                        img.about-image(src='/assets/images/about/5.png' alt='')
             article.container.about-item
-                div.bubble-2
-                figure.about-figure
-                    img.about-image(src='/assets/images/about/6.jpg' alt='')
+                //div.bubble-2
+                figure.about-figure.long-image
+                    img.about-image(src='/assets/images/about/6.png' alt='')
 
                 section
                     h3.about-title Exceptional Team
@@ -55,10 +55,10 @@ block content
                     p.about-description Quality is at the heart of everything we do. We adhere to rigorous quality assurance processes to ensure that our projects meet the highest standards of performance, reliability, and user experience. We stay updated with the latest industry trends and leverage innovative approaches to provide cutting-edge solutions.
 
                 div.figure-group
-                    figure.about-figure
-                        img.about-image(src='/assets/images/about/7.jpg' alt='')
-                    figure.about-figure
-                        img.about-image(src='/assets/images/about/8.jpg' alt='')
+                    figure.about-figure.short-image
+                        img.about-image(src='/assets/images/about/7.png' alt='')
+                    figure.about-figure.short-image
+                        img.about-image(src='/assets/images/about/8.png' alt='')
         section.contact-block
             div.container
                 -

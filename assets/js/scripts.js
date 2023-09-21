@@ -16,7 +16,7 @@ function submitMessage() {
     var email = document.getElementById("email");
     var message = document.getElementById("message");
 
-    if (message.value !== "" && email.value !== "" && isValidEmail(email.value) ) {
+    if (message.value !== "" && email.value !== "" && isValidEmail(email.value)) {
         Email.send({
             SecureToken: "f810f96d-23f1-49b3-890e-3a89fe33900e",
             To: 'info@aybbentech.com',
@@ -25,7 +25,7 @@ function submitMessage() {
             Body: generateEmailTemplate(firstName.value, lastName.value, tel.value, message.value)
         }).then(
             function (message) {
-                var messageItem =  document.querySelectorAll(".success-message").item(0)
+                var messageItem = document.querySelectorAll(".success-message").item(0)
                 document.querySelectorAll("form").item(0).reset();
                 messageItem.style.display = 'flex'
                 setTimeout(function () {
@@ -74,7 +74,8 @@ function generateEmailTemplate(firstName, lastName, telephone, message) {
 }
 
 if (document.querySelector('.slider')) {
-    $('.slider').owlCarousel({
+    var slider = $('.slider');
+    slider.owlCarousel({
         margin: 24,
         navText: ['<img src=\'./assets/images/slider-arrows/left-arrow.svg\' class=\'nav-button owl-prev\'/>', '<img src=\'./assets/images/slider-arrows/right-arrow.svg\' class=\'nav-button owl-next\'/>'],
         loop: true,
@@ -92,8 +93,31 @@ if (document.querySelector('.slider')) {
             900: {
                 items: 3.5
             }
-        }
+        },
+        scrollPerPage: true,
     })
+
+    var debounceTimer;
+
+    slider.on("mousewheel", ".owl-stage", function (e) {
+        if (debounceTimer) {
+            clearTimeout(debounceTimer);
+        }
+
+        debounceTimer = setTimeout(function () {
+            if (e.originalEvent.deltaX === 0 || e.originalEvent.deltaX === -0) {
+                return
+            }
+            if (e.originalEvent.wheelDelta > 0) {
+                slider.trigger("prev.owl");
+            } else {
+                slider.trigger("next.owl");
+            }
+            e.preventDefault();
+            debounceTimer = null;
+        }, 100);
+    });
+
 }
 
 $(document).ready(function () {
@@ -101,8 +125,6 @@ $(document).ready(function () {
     $('button.nav-link').click(function () {
         $('.tab-pane').removeClass('show');
         var id = $(this).attr('data-id')
-        console.log($(this).attr('data-id'))
-        console.log('.tab-pane[data-id=\'' + id + '\']')
         $('.tab-pane[data-id=\'' + id + '\']').addClass('show');
         $('.nav-link').removeClass('active');
         $(this).parent().find('.nav-link').addClass('active');
